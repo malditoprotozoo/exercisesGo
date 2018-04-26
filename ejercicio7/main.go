@@ -5,8 +5,6 @@ import (
 	"fmt"
 )
 
-// Pendiente: Averiguar cómo ingresar inputs de usuario
-
 func calc(num int) {
 	for i := 1; i <= num; i++ {
 		fmt.Println(i)
@@ -14,5 +12,8 @@ func calc(num int) {
 }
 
 func main() {
-	calc(9990)
+	fmt.Println("Wite a number")
+	var input int
+	fmt.Scanln(&input)
+	calc(input)
 }
