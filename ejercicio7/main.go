@@ -12,7 +12,7 @@ func calc(num int) {
 }
 
 func main() {
-	fmt.Println("Wite a number")
+	fmt.Println("Write a number")
 	var input int
 	fmt.Scanln(&input)
 	calc(input)
