@@ -12,16 +12,19 @@ func main() {
 		{4, 21, 2, 3},
 	}
 	result := []int{}
-	first, diagonal, last := 0, 0, len(matrix[0])-1
+	first, diagonal, last, sum := 0, 1, len(matrix[0])-1, 0
 	for i := 0; i < len(matrix); i++ {
 		result = append(result, matrix[i][first])
+		sum += matrix[i][first]
 	}
-	for i := 0; i < len(matrix); i++ {
+	for i := 1; i < len(matrix); i++ {
 		result = append(result, matrix[i][diagonal])
+		sum += matrix[i][diagonal]
 		diagonal++
 	}
-	for i := 0; i < len(matrix); i++ {
+	for i := 0; i < len(matrix)-1; i++ {
 		result = append(result, matrix[i][last])
+		sum += matrix[i][last]
 	}
-	fmt.Println(result, diagonal, last)
+	fmt.Println(result, sum)
 }
