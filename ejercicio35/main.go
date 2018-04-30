@@ -13,10 +13,8 @@ func main() {
 		{4, 21, 2, 3}}
 
 	result := 0
-	index := len(matrix[0]) - 1
 	for i := 0; i < len(matrix); i++ {
-		result += matrix[i][index]
-		index--
+		result += matrix[i][len(matrix[0])-1-i]
 	}
 	fmt.Println(result)
 }
