@@ -13,18 +13,6 @@ package main
 
 import "fmt"
 
-/*func rabbits(months int) int {
-	if months == 1 || months == 2 {
-		return 2
-	}
-	return rabbits(months-1) + rabbits(months-2)
-}
-
-func main() {
-	months := 5
-	fmt.Println(rabbits(months))
-}*/
-
 func frogs(months int) int {
 	bornedFrogs := 100
 	if months == 1 || months == 2 {
